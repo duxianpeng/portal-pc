@@ -1,0 +1,756 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/*
+KISSY CSS Reset
+理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+特色：1. 适应中文；2. 基于最新主流浏览器。
+维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
+ */
+
+
+/** 清除内外边距 **/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td
+/* table elements 表格元素 */
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    background: #fbfaf8;
+    font-family: HelveticaNeue-Light, 'Helvetica Neue Light', Arial, Sans-serif;
+    color: #333;
+    font-size: 14px;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body a:link,
+body a:visited {
+    text-decoration: none;
+    color: #666;
+}
+
+body a:hover,
+body a:active {
+    cursor: pointer;
+    text-decoration: none;
+    color: #c22;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="number"] {
+    outline: none;
+    border: 2px #ba7 solid;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+    background: rgb(243, 241, 235);
+}
+
+input[type="text"]:active,
+input[type="search"]:active,
+input[type="number"]:active,
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border: 2px #ba0 solid;
+    background: #fff;
+}
+
+button {
+    height: 45px;
+    width: 90px;
+    border: 1px #fcc solid;
+    background: transparent;
+    color: #fcc;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #911;
+    border: 1px #fdd solid;
+    color: #fdd;
+}
+
+button.primary {
+    background: #c22;
+    color: #eee;
+}
+
+button.secondary {
+    background: #ba7;
+    border: 0px;
+    color: #eee;
+}
+
+button.secondary:hover {
+    background: #ba0;
+    color: #eee;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.panel {
+    border: 1px #eee solid;
+    color: #999;
+    padding: 0px 10px;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.panel-special1 {
+    padding: 0px;
+}
+
+.panel-special2 {
+    border: 0px;
+    padding: 0px;
+    background: transparent;
+}
+
+.panel-header {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px #eee solid;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.panel-special1 .panel-header {
+    border-top: 5px #ba7 solid;
+    padding-bottom: 0px;
+    height: 61px;
+    line-height: 61px;
+}
+
+.panel-special2 .panel-header,
+.panel-special3 .panel-header {
+    border-bottom: 0px;
+}
+
+.panel-special3 .panel-header {
+    height: 80px;
+    line-height: 80px;
+}
+.panel-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.panel-special1 .panel-title {
+    border-bottom: 5px #ba7 solid;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 25px;
+}
+
+.panel-special3 .panel-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ba7;
+    padding-left: 25px;
+}
+
+.panel-special1 .more {
+    height: 50px;
+    line-height: 50px;
+    padding-right: 25px;
+}
+
+.panel-special2 .more{
+    padding-right: 25px;
+}
+
+.panel-title i {
+    color: #c22;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.panel-nav {
+    margin-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.panel-nav .list-label {
+    font-weight: bold;
+    color: #333;
+    border-left: 5px #ba7 solid;
+    padding-left: 20px;
+}
+
+.panel-nav .category,
+.panel-nav .sub-category,
+.panel-nav .more-category {
+    padding-left: 25px;
+    line-height: 50px;
+}
+
+.panel-nav .sub-category p {
+    background: rgb(243, 241, 235);
+    padding-left: 25px;
+}
+
+.panel-nav .more-filter {
+    margin-top: 15px;
+}
+
+.panel-nav a{
+    padding: 5px 10px;
+}
+
+.panel-nav a.active {
+    background: #d22;
+    padding: 5px 10px;
+    color: #eee;
+}
+
+.panel-body {
+    padding: 15px 0px;
+}
+
+.panel-special2 .panel-body {
+    background: #fff;
+    border: 1px #eee solid;
+}
+
+.panel-special1 .panel-body,
+.panel-special2 .panel-body,
+.panel-special3 .panel-body {
+    padding-left: 25px;
+}
+
+.panel-footer {
+    margin-top: 100px;
+    text-align: right;
+    font-size: 12px;
+}
+.panel-footer * {
+    display: inline-block;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.panel-footer .top-pages {
+    padding: 0px;
+}
+
+.panel-footer .prev-page {
+    padding-right: 0px;
+}
+
+.panel-footer .next-page {
+    padding-left: 0px;
+}
+.panel-footer .top-pages li {
+    padding: 5px 10px;
+}
+
+.panel-footer .top-pages li:hover,
+.panel-footer .top-pages li.active {
+    background: #ba7;
+    color: #fff;
+}
+
+.panel-footer input[type="text"] {
+    box-sizing: border-box;
+    border: .5px #ba7 solid;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 1px;
+    font-size: 10px;
+
+}
+.panel-footer button {
+    margin-left: 2px;
+    height: 25px;
+    width: 30px;
+}
+
+.panel-footer a:hover,
+.panel-footer a:active {
+    text-decoration: none;
+    color: #ba7;
+    cursor: pointer;
+}
+
+.table-header {
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.table-row {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.table-row:last-child {
+    margin-bottom: 0px;
+}
+
+.table-cell {
+    float: left;
+}
+
+.book-item {
+    width: 50%;
+    font-size: 12px;
+}
+
+.book-item:after {
+    display: block;
+    content: "a";
+    color: transparent;
+    clear: both;
+}
+
+.book-item .book-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.book-item .book-author {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.book-item>div:last-child {
+    line-height: 50px;
+}
+
+.status {
+    display: inline-block;
+    padding: 0px 5px;
+    font-size: 12px;
+}
+
+.status-complete {
+    background: #070;
+    color: #fff;
+}
+
+.status-inprogress {
+    background: #c22;
+    color: #fff;
+}
+
+.highlight-red {
+    color: #c22;
+}
+
+.thumb-item {
+    margin-right: 58px;
+    line-height: 40px;
+}
+
+.thumb-item:last-child {
+    margin-right: 0px;
+}
+
+.thumb {
+    box-shadow: 6px 6px 12px -6px black;
+    width: 90px;
+    height: 121px;
+    float: left;
+    margin-right: 15px;
+}
+
+.thumb-item .thumb {
+    margin-right: 0px;
+}
+
+.thumb img {
+    width: 90px;
+    height: 121px;
+}
+
+.thumb-item .book-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.sidebar li {
+    box-sizing: border-box;
+    width: 240px;
+    height: 60px;
+    float: left;
+    border-bottom: 0.5px #ccc solid;
+    color: #999;
+}
+
+.sidebar li:first-child {
+    border-top: 5px #ba7 solid;
+}
+
+.sidebar li:hover {
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    background: rgb(243, 241, 235);
+    color: #ba7;
+}
+
+.sidebar li span {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0px 20px;
+    padding-top: 5px;
+    height: 59.5px;
+    line-height: 50px;
+}
+
+.sidebar li:first-child span {
+    height: 54.5px;
+    padding-top: 0px;
+}
+
+.sidebar li.active span {
+    border-bottom: 5px #ba7 solid;
+}
+
+
+/*Custom*/
+
+
+/*Header*/
+
+.page-header nav {
+    height: 40px;
+    background: #eee;
+    line-height: 40px;
+}
+
+nav li {
+    padding: 0 10px;
+}
+
+nav li.active {
+    background: #ddd;
+}
+
+nav .login span {
+    color: #ccc;
+}
+
+.title {
+    height: 100px;
+    display: flex;
+}
+
+.logo img {
+    width: 200px;
+    height: 50px;
+}
+
+.search input {
+    width: 260px;
+}
+
+.search button {
+    width: 45px;
+    margin-left: 1px;
+}
+
+.menu {
+    height: 60px;
+    background: #c22;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #eaa;
+}
+
+.menu li {
+    width: 171px;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+}
+
+.menu li:hover {
+    background-color: #911;
+    cursor: pointer;
+    color: #fee;
+}
+
+.menu li.active {
+    color: #fee;
+}
+
+.menu button {
+    margin-top: 5px;
+}
+
+.menu-wrapper {
+    position: relative;
+}
+
+.menu li.active .arrow-up {
+    position: absolute;
+    left: 75px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(250, 250, 248);
+}
+
+
+/*Content*/
+
+.category .table-cell {
+    width: 72px;
+}
+
+#rank span {
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    display: inline-block;
+}
+
+#rank .top .pic {
+    position: relative;
+    width: 70px;
+    height: 85px;
+}
+
+#rank .top span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background: #c22;
+    color: #fff;
+}
+
+#rank .top img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 85px;
+    z-index: 0;
+}
+
+#rank .second span {
+    background: #f53;
+    color: #fff;
+}
+
+#rank .third span {
+    background: #fa5;
+    color: #fff;
+}
+
+#rank .table-row .table-cell:last-child {
+    padding-left: 15px;
+}
+
+#banner {
+    width: 720px;
+    height: 240px;
+    margin-right: 10px;
+}
+
+#broadcast {
+    width: 178px;
+    height: 210px;
+    overflow: hidden;
+}
+
+.classic {
+    width: 460px;
+}
+
+.classic .table-cell {
+    width: 100%;
+}
+
+#advert.panel,
+#advert.panel .panel-body {
+    padding: 0px 0px;
+}
+
+#advert .table-cell {
+    width: 389px;
+    height: 130px;
+    margin-right: 15px;
+}
+
+#advert .table-cell:last-child {
+    margin-right: 0px;
+}
+
+#advert img {
+    width: 100%;
+    height: 100%;
+}
+
+.new,
+.complete {
+    width: 590px;
+}
+
+
+/*Footer*/
+
+.page-footer {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    overflow: hidden;
+}
+
+.friends,
+.links,
+.copyright {
+    overflow: hidden;
+}
+
+.friends .block {
+    float: left;
+    width: 150px;
+    height: 60px;
+    border: 1px #ddd solid;
+    position: relative;
+    margin-right: 25px;
+    background: #fff;
+}
+
+.friends .block:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.friends .label {
+    float: left;
+    height: 60px;
+    border: 0px;
+    width: 70px;
+    text-align: left;
+    margin: 0px;
+    line-height: 60px;
+    background: transparent;
+}
+
+.friends .block img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height: 40px;
+    margin: auto;
+}
+
+.links {
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+
+.links li {
+    padding: 0 10px;
+    border-right: 1px #ccc solid;
+}
+
+.links li:first-child {
+    padding-left: 0px;
+}
+
+.links li:last-child {
+    border-right: 0px;
+}
+
+.copyright {
+    color: #532;
+}
+
+.follow img {
+    width: 100px;
+    height: 100px;
+}

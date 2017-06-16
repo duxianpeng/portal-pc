@@ -1,0 +1,23 @@
+<div ui-view="header"></div>
+<div class="container">
+	<div style="margin: 10px 0px;">
+	    <div style="width:248px; float:right;">
+	    	<div ui-view="category" style="overflow:hidden;"></div>
+	    	<div ui-view="rank" style="overflow:hidden;"></div>
+	    </div>
+	    <div style="width:940px; float:left;">
+			<div ui-view="banner" style="overflow:hidden;"></div>
+			<div ui-view="recommend" style="overflow:hidden;"></div>
+			<div ui-view="classic" style="overflow:hidden;"></div>
+	    </div>
+	    <div style="clear:both;"></div>
+	</div>
+	<div>
+		<div ui-view="advert" style="overflow:hidden;"></div>
+		<div ui-view="new" style="overflow:hidden;"></div>
+		<div ui-view="complete" style="overflow:hidden;"></div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<div ui-view="footer"></div>
+
