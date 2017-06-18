@@ -62,68 +62,30 @@
 
         //Detect iPad
         var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
-        if (isiPad)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
+
         //Detect iPhone
         var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
-        if (isiPhone)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
+
         //Detect iPod
         var isiPod = /ipod/i.test(navigator.userAgent.toLowerCase());
-        if (isiPod)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
+
         //Detect iDevice
         var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
-
-        if (isiDevice)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
 
         //Detect Andriod
         var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
 
-        if (isAndroid)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
         //Detect Blackberry
         var isBlackBerry = /blackberry/i.test(navigator.userAgent.toLowerCase());
 
-        if (isBlackBerry)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
         //Detect WebOs
         var isWebOS = /webos/i.test(navigator.userAgent.toLowerCase());
 
-        if (isWebOS)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
         //Detect Windows Phone
         var isWindowsPhone = /windows phone/i.test(navigator.userAgent.toLowerCase());
 
-        if (isWindowsPhone)
-        {
-            console.log("Mobile");
-            window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
-        }
 
-          if($.browser.mobile){
+          if($.browser.mobile || isiPad || isiPhone || isiPod || isiDevice || isAndroid || isBlackBerry || isWebOS || isWindowsPhone){
             console.log("Mobile");
             window.location.href="http://47.93.52.20/yuewen-web-portal-m"; 
           }else{
