@@ -15,7 +15,9 @@
 log/
 target/
 
-# Nodejs
-node_modules
+# Npm
+node_modules/
+
+#bower
 bower_components
-.tmp
+
