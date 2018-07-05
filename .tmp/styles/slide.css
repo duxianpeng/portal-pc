@@ -1,0 +1,77 @@
+.banner-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.banner-container>div {
+	position: absolute;
+	z-index: 0;
+}
+
+.banner-container>div img {
+	position: absolute;
+}
+
+.dot-wrap,
+.banner-prev,
+.banner-next {
+	z-index: 1;
+}
+
+.dot-wrap {
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+}
+
+.dot-wrap span{
+	color: rgba(0,0,0,.5);
+	font-size: 200%;
+}
+
+.dot-selected {
+	color: #c20!important;
+}
+
+.dot-wrap>span {
+	color: rgba(0,0,0,0.5);
+}
+
+.dot-wrap>span:hover,
+.banner-prev:hover,
+.banner-next:hover {
+	cursor: pointer;
+	color: rgba(0,0,0,1);
+}
+
+.banner-prev {
+	position: absolute;
+	left: 0px;
+}
+
+.banner-next {
+	position: absolute;
+	right: 0px;
+}
+
+.banner-prev,
+.banner-next {
+	background: rgba(0,0,0,.5);
+	width: 20px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+	visibility: hidden;
+}
+
+.banner-prev:hover,
+.banner-next:hover {
+	background: rgba(0,0,0,1);
+    color: #fff;
+}
+
+.banner-container:hover .banner-prev,
+.banner-container:hover .banner-next {
+	visibility: visible;
+}
