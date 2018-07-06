@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)
  *
