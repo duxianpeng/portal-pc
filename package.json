@@ -1,8 +1,7 @@
 {
   "name": "yuewen",
   "private": true,
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=0.10.0"
   },

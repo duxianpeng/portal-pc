@@ -1,0 +1,49 @@
+<div class="tab-panel container" style="height:600px">
+        <div class="tab-header">
+            <ul  ng-init='activeTab=1'>
+                    <li ng-class='{active:activeTab==1}' ng-click='activeTab=1'><i class="iconfont icon-step-1"></i> 创建帐号 </li>
+                    <li ng-class='{active:activeTab==2}' ng-click='activeTab=2'><i class="iconfont icon-Completed"></i> 注册成功 </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane" ng-show='activeTab==1'>
+                <div class="form-panel">
+                    <div class="row">
+                        <label for="phoneNumber" class="fl">手机号</label>
+                        <div class="right-col fr">
+                                <input type="text" id="phoneNumber" name="phoneNumber"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="validateCode" class="fl">短信验证</label>
+                        <div class="right-col fr">
+                            <input type="text" id="validateCode" name="validateCode" style="width: 50%;" />
+                            <button class="secondary" style="display: inline-block;width: 30%; margin-left: 20px;">验证</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="password" class="fl">密码</label>
+                        <div class="right-col fr">
+                            <input type="password" id="password" name="password"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <label for="confirmPassword" class="fl">确认密码</label>
+                            <div class="right-col fr">
+                                <input type="password" id="confirmPassword" name="confirmPassword"/>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="right-col fr">
+                                <input type="checkbox" id="agreement" name="isAgreed"/>
+                                <label for="agreement">我已阅读并同意《用户协议》</label>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <button class="primary">注册</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" ng-show="activeTab==2">tab2</div>
+        </div>
+    </div>

@@ -1,4 +1,4 @@
-<header class="page-header" ng-controller="HeaderCtrl">
+<header class="page-header">
   <nav>
     <div class="container">
       <ul class="fl">
@@ -9,9 +9,9 @@
       </ul>
 
       <ul class="login fr">
-        <li><a ng-href="#" ng-click="openLoginDialog()">登陆</a></li>
+        <li><a ui-sref="login">登陆</a></li>
         <span class="fl">|</span>
-        <li><a ng-href="#">注册</a></li>
+        <li><a ui-sref="login.register">注册</a></li>
       </ul>
     </div>
   </nav>
@@ -21,7 +21,7 @@
         <img src="images/logo.png"/>
       </div>
       <div class="search fr">
-        <input type="search" class="fl"/>
+        <input type="search" class="fl" placeholder="小说 | 作者"/>
         <button class="secondary"><i class="iconfont icon-search"></i></button>
       </div>
     </div>

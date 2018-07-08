@@ -1,0 +1,31 @@
+<div class="tab-panel container" style="height:500px">
+    <div class="tab-header">
+        <ul  ng-init='activeTab=1'>
+                <li ng-class='{active:activeTab==1}' ng-click='activeTab=1'> 帐户登录 </li>
+                <li ng-class='{active:activeTab==2}' ng-click='activeTab=2'> 微信登录 </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane" ng-show='activeTab==1'>
+            <div class="form-panel">
+                <div class="row">
+                        <input type="text" name="username"/>
+                </div>
+                <div class="row">
+                        <input type="password" name="password"/>
+                </div>
+                <div class="row">
+                     <div class="fl">
+                            <input type="checkbox" id="rememberme" name="rememberme" checked="checked"/>
+                            <label for="rememberme">自动登录</label>
+                     </div>
+                    <a ui-sref="#" class="fr">忘记密码</a>
+                </div>
+                <div class="row">
+                    <button class="primary">登录</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" ng-show="activeTab==2">tab2</div>
+    </div>
+</div>

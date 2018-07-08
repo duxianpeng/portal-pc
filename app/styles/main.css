@@ -100,24 +100,128 @@ body a:active {
 
 input[type="text"],
 input[type="search"],
+input[type="password"],
 input[type="number"] {
     outline: none;
-    border: 2px #ba7 solid;
+    border: 2px #eee solid;
     height: 45px;
     line-height: 45px;
     padding-left: 10px;
-    background: rgb(243, 241, 235);
+    background: #fff;
+    box-sizing: border-box;
 }
 
 input[type="text"]:active,
 input[type="search"]:active,
 input[type="number"]:active,
+input[type="password"]:active,
 input[type="text"]:focus,
 input[type="search"]:focus,
-input[type="number"]:focus {
+input[type="number"]:focus,
+input[type="password"]:focus {
     outline: none;
     border: 2px #ba0 solid;
     background: #fff;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=radio]:disabled,
+input[type=checkbox]:disabled {
+    cursor: not-allowed
+}
+
+input[type=radio] + label,
+input[type=checkbox] + label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+    height: 45px;
+    line-height: 45px;
+    box-sizing: border-box;
+}
+
+input[type=radio] + label:before,
+input[type=checkbox] + label:before {
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    content: '';
+    border: 1px #c22 solid;
+    color: #c22;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+input[type=radio] + label:after,
+input[type=checkbox] + label:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+input[type=radio]:disabled + label,
+input[type=checkbox]:disabled + label {
+    cursor: not-allowed;
+    color: #eee;
+}
+
+input[type=radio]:disabled + label:hover,
+input[type=checkbox]:disabled + label:hover,
+input[type=radio]:disabled + label:before,
+input[type=checkbox]:disabled + label:before,
+input[type=radio]:disabled + label:after,
+input[type=checkbox]:disabled + label:after {
+    cursor: not-allowed;
+}
+
+input[type=radio]:disabled + label:before,
+input[type=checkbox]:disabled + label:before {
+    border: 1px #eee solid;
+}
+
+input[type=radio] + lable:before {
+    border-radius: 50%;
+}
+
+input[type=checkbox] + lable:before {
+    border-radius: 3%;
+}
+
+input[type=radio]:checked + label:before,
+input[type=checkbox]:checked + label:before {
+    border: 1px #c22 solid;
+}
+
+input[type=radio]:disabled + label:before,
+input[type=checkbox]:disabled + label:before {
+    border: 1px #eee solid;
+}
+
+input[type=checkbox]:checked + label:before {
+    background: #c22;
+    color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+    background: #eee;
+}
+
+input[type=radio]:checked + label:before {
+    content: '.';
+}
+
+input[type=checkbox]:checked + label:before {
+    content: '✓';
 }
 
 button {
@@ -165,7 +269,7 @@ ul {
 
 li {
     list-style: none;
-    float: left;
+    display: inline-block;
 }
 
 .clearfix {
@@ -502,6 +606,96 @@ li {
     border-bottom: 5px #ba7 solid;
 }
 
+.subject {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.title .subject {
+    border-left: 1px #999 solid;
+    padding-left: 20px;
+}
+
+.tab-header{
+    border-bottom: 1px #eee solid;
+    font-size: 20px;
+}
+
+.tab-header ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+.tab-header ul li {
+    line-height: 50px;
+    text-align: center;
+    width: 150px;
+    position: relative;
+    cursor: pointer;
+    color: #999;
+}
+
+.tab-header li i.iconfont {
+    padding-right: 10px;
+}
+
+ .tab-header li.active i.iconfont {
+    color: #c22;
+ }
+
+.tab-header ul li::before {
+    content: "";
+    position: absolute;
+    border-bottom: 3px #c22 solid;
+    bottom: -3px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+}
+
+.tab-header ul li:hover::before{
+    width: 100%;
+}
+
+.tab-header ul li.active{
+    color: #000;
+}
+
+.form-panel {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+.form-panel .row{
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+}
+
+.form-panel input[type='text'],
+.form-panel input[type="password"],
+.form-panel button {
+    width: 100%;
+}
+
+.form-panel .right-col
+ {
+    display: inline-block;
+    width: 380px;
+    position: relative;
+}
+
+.form-panel .right-col input:not([type='checkbox']) {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-panel .right-col input[type='checkbox'] + label {
+    padding-top: 15px;
+}
 
 /*Custom*/
 
@@ -762,3 +956,5 @@ nav .login span {
     width: 100px;
     height: 100px;
 }
+
+

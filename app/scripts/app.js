@@ -15,12 +15,13 @@ angular
         'ngResource',
         'ngSanitize',
         'ngTouch',
-        'ui.router',
-        'ui.bootstrap'
+        'ui.router'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.when('/classic', '/classic/weekly')
                           .when('/category', '/category/mars')
+                          .when('/login', '/login/login')
+                          .when('/register', '/register/register')
                           .otherwise('/main');
         $stateProvider.state('main', {
             url: '/main',
@@ -148,5 +149,29 @@ angular
                     url : '/publish',
                     templateUrl : 'views/category/publish.html'
                 }
-            );
+            ).state(
+                'login', {
+                    url: '/login',
+                    views: {
+                        '': {
+                            templateUrl: 'views/login/layout.html'
+                        },
+                        'header@login': {
+                            templateUrl: 'views/login/header.html'
+                        },
+                        'footer@login': {
+                            templateUrl: 'views/login/footer.html'
+                        }
+                    }
+                }).state(
+                    'login.login', {
+                        url : '/login',
+                        templateUrl : 'views/login/login.html'
+                    }
+                ).state(
+                    'login.register', {
+                        url : '/register',
+                        templateUrl : 'views/login/register.html'
+                    }
+                );
     });
